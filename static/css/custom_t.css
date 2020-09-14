@@ -1,0 +1,299 @@
+.sidebar[data-color="main-color"]:after,
+.bootstrap-navbar[data-color="main-color"]:after {
+    background: #003f7e;
+}
+.sidebar .nav .nav-item .nav-link{
+    margin: 0;
+    opacity: 1;
+}
+.sidebar .sidebar-wrapper .nav .nav-item [data-toggle="collapse"]~div .nav .nav-item.active .nav-link {
+    background: #ffffff;
+    color: #003f7e;
+    font-weight: 600;
+    border-radius: 0;
+}
+.main-panel{
+    background: #ffffff;
+}
+.navbar{
+    border-bottom: 2px solid #003f7e;
+}
+.sidebar .caret{
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+}
+.sidebar .caret:before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 5px;
+    background: #ffffff;
+    left: 4px;
+    top: 2px;
+}
+.sidebar .caret:after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 5px;
+    background: #ffffff;
+    left: 2px;
+    top: 4px;
+}
+.sidebar a[data-toggle="collapse"][aria-expanded="true"] .caret{
+    transform: rotate(0deg);
+}
+.sidebar a[data-toggle="collapse"][aria-expanded="true"] .caret:before{
+    display: none;
+}
+.sidebar .nav .nav-item .nav-link{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.sidebar .nav .nav-item .nav-link:hover{
+    border-radius: 0;
+}
+.nav-item__icon{
+    width: 25px;
+    height: 25px;
+}
+.sidebar .sidebar-wrapper .nav .nav-link p{
+    width: calc(100% - 30px);
+    margin-left: 5px;
+}
+
+.sidebar .sidebar-wrapper .nav .nav-item [data-toggle="collapse"]~div .nav .nav-item .nav-link{
+    padding-left: 60px;
+    position: relative;
+    font-size: 13px;
+}
+/* .sidebar .sidebar-wrapper .nav .nav-item [data-toggle="collapse"]~div .nav .nav-item .nav-link:before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: #336598;
+    left: 45px;
+    top: 15px;
+} */
+.sidebar .logo{
+    padding: 10px 15px;
+}
+.sidebar .logo:before{
+    display: none;
+}
+.btn-warning, .btn-warning:hover,.btn-warning:focus{
+    background: transparent;
+    border: none;
+}
+.navbar-minimize .btn-round.btn-icon{
+    padding-top: 16px;
+    margin-bottom: 0;
+}
+.main-panel .navbar{
+    margin-top: -44px;
+}
+.navbar-wrapper a{
+    padding-right: 10px;
+}
+.navbar-wrapper span{
+    color: #003f7e;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.sidebar-logo{
+    position: fixed;
+    z-index: 99;
+    left: 15px;
+    bottom: 15px;
+    transition: ease 0.5s;
+}
+.sidebar-mini .sidebar-logo{
+    left: -45px;
+}
+
+.navbar-minimize{
+    position: relative;
+    margin-left: 220px;
+    z-index: 999;
+}
+.sidebar-mini .navbar-minimize{
+    margin-left: 30px;
+}
+.navbar-minimize .visible-on-sidebar-regular, .navbar-minimize .fa-navicon{
+    width: 20px;
+    background: #ffffff;
+    height: 2px;
+    position: relative;
+}
+.navbar-minimize .visible-on-sidebar-regular:before, .navbar-minimize .fa-navicon:before{
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    top: -6px;
+    left: 0;
+    position: absolute;
+}
+.navbar-minimize .visible-on-sidebar-regular:after, .navbar-minimize .fa-navicon:after{
+    content: "";
+    width: 14px;
+    height: 2px;
+    background: #ffffff;
+    top: 6px;
+    left: 6px;
+    position: absolute;
+}
+.navbar .navbar-toggler .burger-lines:last-child{
+    width: 16px;
+    margin-left: 8px;
+}
+@media (max-width: 769px){
+    .main-panel .navbar{
+        margin-top: -13px;
+    }
+}
+@media (min-width: 992px){
+    .sidebar-mini .sidebar:hover ~ .navbar-minimize{
+        margin-left: 220px;
+    }
+    .main-panel .navbar{
+        padding: 0;
+    }
+}
+/*-----------content---------*/
+.card{
+    border: none;
+}
+.table{
+    border: 1px solid #adb2b4;
+}
+.table thead tr{
+    background: #003f7e;
+    vertical-align: center;
+
+}
+.table>thead>tr>th{
+    color: #ffffff;
+}
+.table>tbody>tr>td{
+    border: 1px solid #adb2b4;
+}
+.table-hover tbody tr:nth-child(2n) {
+    background-color: #ebf1f7;
+}
+.table-hover tbody tr.td-warning{
+    background: #fdf1ef;
+}
+.card .table tbody td:last-child, .card .table thead th:last-child{
+    display: table-cell;
+}
+.table .td-actions .btn{
+    opacity: 1;
+}
+.table .btn.disabled{
+    background: #84888b;
+    border: 2px solid #84888b;
+}
+.table .btn{
+    opacity: 1;
+    line-height: 1;
+    font-size: 0.8rem;
+    color: #000000;
+    margin: 0 3px;
+    border: 2px solid #0757a7;
+    background: #ffffff;
+}
+.table .btn-outline:hover{
+    background: #0757a7;
+    color: #ffffff;
+}
+.bootstrap-table .fixed-table-pagination{
+    margin:10px 0 0 0;
+}
+.fixed-table-pagination .pagination-info{
+    margin-left: 0;
+}
+.fixed-table-toolbar{
+    padding: 0;
+}
+.fixed-table-toolbar:after{
+    clear: both;
+}
+.fixed-table-toolbar .pull-right .btn{
+    padding: 8px 10px;
+}
+.table-full-width{
+    padding: 0 !important;
+}
+@media (max-width: 991px){
+    .sidebar .logo {
+        padding: 8px 15px;
+    }
+    .sidebar .logo a.logo-normal{
+        padding: 0;
+    }
+    .nav-mobile-menu{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
+/*-----------content---------*/
+/*-----------form---------*/
+.form-horizontal{
+    font-size: 12px;
+}
+.control-label{
+    font-weight: bold;
+    padding-top: 8px;
+}
+.control-label span{
+    color: #e92020;
+    padding: 0 5px;
+}
+.form-control{
+    height: 32px;
+    font-size: 12px;
+}
+.form-check .form-check-sign::after{
+    color: #f58220;
+}
+.btn-info{
+    border: 1px solid #003f7e;
+    background-color: #003f7e;
+}
+
+/*-----------form---------*/
+/*-----------common---------*/
+.title_3{
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.title_3:before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #dddddd;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    z-index: 0;
+}
+.title_3 span{
+    background: #ffffff;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+/*-----------common---------*/

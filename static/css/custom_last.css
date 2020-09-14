@@ -1,0 +1,134 @@
+body .main-panel {
+    background-color: #FFF;
+}
+.main-panel .navbar{
+    margin-top: 0px;
+}
+.main-panel .navbar {
+    border-bottom: 2px solid #003F7E;
+}
+.navbar .breadcrumb {
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    background-color: #FFF;
+}
+.navbar .breadcrumb .breadcrumb-item a {
+    font-size: 18px;
+    color: #aaaaaa;
+    font-weight: bold;
+}
+.navbar .breadcrumb .breadcrumb-item span {
+    font-size: 18px;
+    color: #003F7E;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar .breadcrumb-item+.breadcrumb-item::before {
+    font-size: 18px;
+    font-weight: bold;
+}
+.main-panel .btn {
+    text-transform: uppercase;
+}
+.main-panel .btn-primary {
+    border-color: #003F7E;
+    background-color: #003F7E;
+}
+.main-panel .btn-primary:hover {
+    border-color: #003972;
+    background-color: #003972;
+}
+.btn-warning, .btn-warning:hover, .btn-warning:focus{
+    background-color: #ff9510;
+    border: 1px solid #ff9510;
+}
+.main-panel .bootstrap-table .table > thead > tr > th {
+    color: #FFF;
+    text-transform: capitalize;
+    font-size: 13px;
+    border: 1px solid #adb2b4;
+    padding: 6px 5px;
+    white-space: nowrap;
+}
+.main-panel .bootstrap-table .table > thead > tr > td {
+    border: 1px solid #adb2b4;
+}
+.main-panel .bootstrap-table .table > thead > tr > th.VueTables__sortable {
+    padding-right: 20px;
+}
+.VueTables__sort-icon {
+    position: absolute;
+    right: 0px;
+}
+.wrapper .sidebar .nav .nav-item .nav-link {
+    margin: 0px;
+}
+.wrapper .item-side-bar .nav-link .caret {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+}
+.wrapper .sidebar .nav .nav-item .nav-link {
+    padding: 6px 5px 6px 15px;
+}
+.wrapper .sidebar .item-side-bar .nav .nav-item .nav-link {
+    padding: 3px 10px;
+}
+.wrapper .sidebar .sidebar-wrapper .nav .nav-item [data-toggle='collapse'] ~ div .nav .nav-item .nav-link {
+    font-size: 12px;
+}
+.wrapper .sidebar .user .info .caret {
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+}
+.wrapper .item-side-bar img {
+    width: 20px;
+    margin-right: 15px;
+}
+.wrapper .sidebar .sidebar-wrapper .nav .nav-link p {
+    text-transform: none;
+    font-weight: normal;
+    font-size: 13px;
+}
+.wrapper .sidebar .sidebar-wrapper .nav .nav-item [data-toggle='collapse'] ~ div .nav .nav-item.active .nav-link {
+    background-color: #FFF;
+}
+.wrapper .sidebar .nav .nav-item .nav-link i {
+    font-size: 12px;
+}
+.wrapper .sidebar .user .info > a {
+    padding: 8px 5px 8px 0px;
+    font-size: 13px;
+}
+.wrapper .sidebar .user .info .nav, .wrapper .sidebar .user .info .nav li {
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper .sidebar .user .profile-dropdown .sidebar-normal {
+    left: 5px;
+}
+.wrapper .sidebar .user .info .nav a {
+    padding: 6px 0px;
+}
+.wrapper .sidebar .user .info .nav a span {    
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.wrapper .sidebar .user .photo {
+    margin-left: 15px;
+}
+.wrapper .sidebar .user .info .caret {
+    right: 0px;
+}
+.table .btn {
+    border: none;
+}
+.table .table-action {
+    padding:0px 2px;
+}
+.main-panel .card .table tbody td:last-child, .main-panel .card .table thead th:last-child {
+    display: table-cell;
+}

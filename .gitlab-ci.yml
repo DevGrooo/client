@@ -1,0 +1,60 @@
+stages:
+ - build_client
+ - package_client
+ - deploy_client
+  
+build_client:
+  stage: build_client
+  image: node:10
+  script:
+    - npm install
+    - cp $CLIENT_ENV .env
+    - npm run build
+    - mkdir dist
+    - cp -R .nuxt dist
+    - cp -R static dist
+    - cp -R store dist
+    - cp -R node_modules dist
+    - cp nuxt.config.js dist
+    - cp package.json dist
+    - cp .env dist
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+  tags:
+    - grooo-docker
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[build\]/
+      
+package_client:
+  stage: package_client
+  script:
+    - docker build -f .docker/Dockerfile -t grooo/fmc-client .
+    - export IMAGE="684824300297.dkr.ecr.ap-southeast-1.amazonaws.com/grooo/fmc-client:latest"
+    - docker tag grooo/fmc-client:latest $IMAGE
+    - docker push $IMAGE
+    - echo "Deleting all untagged images:"
+    - aws ecr list-images --repository-name grooo/fmc-client --query 'imageIds[?type(imageTag)!=`string`].[imageDigest]' --output text | while read line; do aws ecr batch-delete-image --repository-name grooo/fmc-client --image-ids imageDigest=$line; done
+  artifacts:
+    paths:
+      - dist
+  tags:
+    - grooo-shell
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[build\]/
+      
+deploy_client:
+  stage: deploy_client
+  script:
+    - cat .docker/deploy-stg.sh | ssh -o StrictHostKeyChecking=no -i ~/.ssh/grooo-build-dev.pem ec2-user@$SERVER_DEV_IP
+  tags:
+    - grooo-shell
+  only:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /\[build\]/
+
